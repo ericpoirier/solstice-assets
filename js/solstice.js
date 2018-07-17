@@ -111,6 +111,15 @@
     $('.eclipse-search a').dropdown("toggle");
   });
 
+  // If the Manage Cookies button from the toolbar is clicked,
+  // open the cookie consent popup.
+  $('.toolbar-manage-cookies').click(function() {
+    $('.cc-window').show();
+    setTimeout(function() {
+      $('.cc-window').removeClass('cc-invisible');
+    }, 20);
+  });
+
   eclipseFdnVideos.replace();
   
   
