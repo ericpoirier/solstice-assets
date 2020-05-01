@@ -66,6 +66,8 @@
   background-color:@eclipsecon-sponsors-header-block-background-color;
   border-top:@eclipsecon-sponsors-header-block-border-top;
   border-bottom:@eclipsecon-sponsors-header-block-border-bottom;
+  border-right:@eclipsecon-sponsors-header-block-border-right;
+  border-left:@eclipsecon-sponsors-header-block-border-left;
   h3{
     font-size:@eclipsecon-sponsors-header-block-h3-font-size;
     font-weight:@eclipsecon-sponsors-header-block-h3-font-weight;
@@ -117,19 +119,67 @@
   }
 }
 
+.region-sidebar-second {
+  .block {
+    .view-footer {
+      border-bottom:none;
+    }
+  }
+  .solstice-block-white-bg {
+    .block-content {
+      padding-top:0;
+    }
+  }
+  .view-eclipsecon-sponsors-block-3{
+    .wrapper-sponsor-level:first-child{
+      margin-right:0;
+    }
+  }
+  
+  .view-eclipsecon-sponsors-block-common:not(.view-eclipsecon-sponsors-block){
+    margin-top:30px;
+    .wrapper-sponsor-level {
+      display:block;
+      margin-bottom:10px;
+      h3 {
+        text-transform:initial;
+        font-weight:700;
+        font-size:18px;
+        margin-top:0px;
+      }
+      ul.list-inline {
+        li {
+          @media (min-width: @screen-md-min) {
+            padding:0;
+            display:block;
+            margin-bottom:20px;
+          }
+        }
+        img {
+          margin:0 auto;
+        }
+      }
+    }  
+  } 
+}
+
 // All Sponsors - Footer sponsor list
 .view-eclipsecon-sponsors-block{
+  background-color:@eclipsecon-sponsors-block-bg-color;
+  padding:@eclipsecon-sponsors-block-padding;
   h2{
     background-image:@eclipsecon-sponsors-background-image;
     background-size:cover;
-    padding:70px 0;
+    padding:@eclipsecon-sponsors-block-h2-padding;
+    margin:@eclipsecon-sponsors-block-h2-margin;
+    font-size:@eclipsecon-sponsors-block-h2-font-size;
     text-align:center;
     a{
-      background-color:darken(@brand-secondary,15%);
-      padding:10px 15px;
-      color:@white;
+      background-color:@eclipsecon-sponsors-block-h2-link-bg-color;
+      padding:@eclipsecon-sponsors-block-h2-link-padding;
+      color:@eclipsecon-sponsors-block-h2-link-color;
       position:relative;
-      font-weight:lighter;
+      font-weight:@eclipsecon-sponsors-block-h2-link-font-weight;
       &:after{
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
@@ -146,18 +196,21 @@
     }
   }
   .view-header{
-    padding:40px 0;
-    font-size:1.7em;
-    font-weight:300;
+    padding:@eclipsecon-sponsors-block-view-header-padding;
+    font-size:@eclipsecon-sponsors-block-view-header-font-size;
+    font-weight:@eclipsecon-sponsors-block-view-header-font-weight;
     text-align:center;
+    margin:@eclipsecon-sponsors-block-view-header-margin;
   }
   .wrapper-sponsor-level{
     margin-bottom:40px;
     h3{
-      border-top:2px dotted #ccc;
-      color:@brand-secondary;
+      border-top:@eclipsecon-sponsors-block-h3-border-top;
+      color:@eclipsecon-sponsors-block-h3-color;
+      font-weight:@eclipsecon-sponsors-block-h3-font-weight;
+      font-size:@eclipsecon-sponsors-block-h3-font-size;
       span{
-        background-color:@white;
+        background-color:@eclipsecon-sponsors-block-h3-span-bg-color;
         padding:0 15px;
         position:relative;
         top:-15px;
